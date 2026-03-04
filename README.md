@@ -24,3 +24,10 @@ Then open:
 ```bash
 python3 -m http.server 3000
 ```
+
+
+## Quick smoke test
+Run the requested checks in one command:
+```bash
+./smoke-test.sh 3000
+```
