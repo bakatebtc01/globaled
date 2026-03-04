@@ -1,4 +1,46 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Scholarships | Global-Ed</title><link rel="stylesheet" href="styles.css"></head><body>
-<header class="topbar"><div class="container nav"><a class="brand" href="index.html">Global-Ed</a><nav class="menu"><a href="about.html">About</a><a href="programs.html">Programs</a><a href="scholarships.html">Scholarships</a><a href="dashboard.html">Student Portal</a><a href="admin.html">Admin</a><a href="partners.html">Partners</a><a href="contact.html">Contact</a></nav></div></header>
-<section class="section"><div class="container grid columns-2"><div class="card"><h2>Scholarship Search</h2><label>Country</label><select><option>Any</option><option>USA</option><option>Australia</option><option>UK</option><option>India</option></select><label>Field</label><select><option>Any</option><option>Computer Science</option><option>Engineering</option><option>Data Science</option></select><label>Degree</label><select><option>Any</option><option>Undergraduate</option><option>Postgraduate</option></select><p><small>Prototype filters (connect to API in production).</small></p></div><div class="card"><h2>Top Match</h2><h3>STEM Excellence Scholarship</h3><p>Country: USA<br>University: South Dakota State University<br>Field: Computer Science</p><span class="badge">AI Match: 82%</span><div style="margin-top:.8rem;"><a class="btn btn-primary" href="apply.html">Apply</a></div></div></div></section>
-<footer class="footer"><div class="container">© Global-Ed</div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarships | Global-Ed</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar"><div class="container nav"><a class="brand" href="index.html">Global-Ed</a><nav class="menu"><a href="about.html">About</a><a href="programs.html">Programs</a><a href="scholarships.html">Scholarships</a><a href="apply.html">Apply</a><a href="dashboard.html">Student Portal</a><a href="admin.html">Admin</a><a href="partners.html">Partners</a><a href="contact.html">Contact</a></nav></div></header>
+<section class="section">
+  <div class="container grid columns-2">
+    <form class="card" data-scholarship-filters>
+      <h2>Scholarship Search</h2>
+      <label>Country</label>
+      <select name="country"><option>Any</option><option>USA</option><option>Australia</option><option>UK</option></select>
+      <label>Field</label>
+      <select name="field"><option>Any</option><option>Computer Science</option><option>Engineering</option><option>Data Science</option></select>
+      <label>Degree</label>
+      <select name="degree"><option>Any</option><option>Undergraduate</option><option>Postgraduate</option></select>
+      <p class="muted">Instant filter preview. Connect this to API endpoints in production.</p>
+    </form>
+
+    <div class="grid">
+      <article class="card" data-scholarship-card data-country="USA" data-field="Computer Science" data-degree="Undergraduate">
+        <h3>STEM Excellence Scholarship</h3>
+        <p>USA • South Dakota State University • Computer Science • Undergraduate</p>
+        <span class="badge badge-success">AI Match: 82%</span>
+      </article>
+      <article class="card" data-scholarship-card data-country="USA" data-field="Engineering" data-degree="Postgraduate">
+        <h3>Global Engineers Track</h3>
+        <p>USA • Nicholls State University • Engineering • Postgraduate</p>
+        <span class="badge badge-success">AI Match: 78%</span>
+      </article>
+      <article class="card" data-scholarship-card data-country="Australia" data-field="Data Science" data-degree="Postgraduate">
+        <h3>Pacific Data Fellowship</h3>
+        <p>Australia • Partner University • Data Science • Postgraduate</p>
+        <span class="badge badge-success">AI Match: 80%</span>
+      </article>
+    </div>
+  </div>
+</section>
+<footer class="footer"><div class="container">© Global-Ed</div></footer>
+<script src="app.js"></script>
+</body>
+</html>

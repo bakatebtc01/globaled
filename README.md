@@ -1,26 +1,26 @@
 # Global-Ed Corporate Website Prototype
 
-This repository now contains a working multi-page, mobile-first corporate website prototype for Global-Ed.
+A finalized static prototype for immediate stakeholder preview.
 
-## Pages
-- `/index.html` – homepage
-- `/about.html`
-- `/programs.html`
-- `/scholarships.html`
-- `/apply.html` – student application form prototype (Save Draft UX)
-- `/dashboard.html` – student dashboard
-- `/admin.html` – admin dashboard
-- `/partners.html`
-- `/contact.html`
+## Available Pages
+- `/index.html` — Homepage
+- `/about.html` — About Global-Ed
+- `/programs.html` — Program milestones
+- `/scholarships.html` — Scholarship search prototype with live filtering
+- `/apply.html` — Student application form with Save & Resume draft logic (localStorage)
+- `/dashboard.html` — Student tracking dashboard
+- `/admin.html` — Admin control panel
+- `/partners.html` — Partner universities
+- `/contact.html` — Contact page
 
-## Run locally (terminal)
+## Launch localhost preview now
 ```bash
-./start-preview.sh
+./start-preview.sh 3000
 ```
 Then open:
 - http://localhost:3000/index.html
 
-Alternative:
+## Alternative
 ```bash
 python3 -m http.server 3000
 ```
